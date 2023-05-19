@@ -8,6 +8,8 @@ using UnityEngine.Events;
 
 public class PlayManager : MonoBehaviour
 {
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] AudioClip music;
     [SerializeField] BallController ballController;
     [SerializeField] CameraController camController;
     [SerializeField] GameObject finishDialog;
@@ -23,8 +25,15 @@ public class PlayManager : MonoBehaviour
     bool isBallOOB;
     bool isBallTeleporting;
     bool isGoal;
-    bool isPaused = false;
+    bool isPaused;
     Vector3 lastKnownPosition;
+
+    private void Start()
+    {
+        isPaused = false;
+        Time.timeScale = 1.0f;
+        audioManager.PlayBGM(music);
+    }
 
     private void OnEnable()
     {

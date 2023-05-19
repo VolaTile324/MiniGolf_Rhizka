@@ -953,6 +953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c203ca9499ca13f42bcc0ed163216c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 169302744}
+  music: {fileID: 8300000, guid: 664831f5fe1c72f41bb50ed8efc5ffeb, type: 3}
   ballController: {fileID: 1257110579}
   camController: {fileID: 323891544}
   finishDialog: {fileID: 903751658}
