@@ -78,7 +78,7 @@ public class AppSetting : MonoBehaviour
 
     IEnumerator ResConfirmation()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSecondsRealtime(10f);
         if (confirmDialog.gameObject.activeSelf)
         {
             RevertResolution();
